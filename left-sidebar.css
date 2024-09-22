@@ -1,0 +1,93 @@
+@font-face {
+    font-family: "CircularSpotifyTex";
+    src: url(./font/CircularSpotifyText-Book.woff2) format("woff2"),
+         url(./font/CircularSpotifyText-Book.woff) format("woff"),
+         url(./font/CircularSpotifyText-Book.otf) format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    font-family: "CircularSpotifyTex", Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.library-container {
+    display: flex;
+    align-items:center;
+    justify-content:left;
+    /* height: 40px; */
+    background-color: var(--BackColor);
+    border-radius: 7.5px;
+    padding:15px 15px 15px 15px !important;
+
+}
+
+.library-text {
+    line-height:40px;
+    color: var(--textColorNormal);
+    font-weight: bolder;
+    margin-right: 50px;
+    font-size: 18px; /* Adjust font size as needed */
+}
+
+.library-button {
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    color: var(--textColorNormal);
+    cursor: pointer;
+    font-size: 30px; /* Adjust size for the icons /
+    margin-left: 10px; / Space between text and button */
+    transition: color 0.2s;
+}
+.library-button:hover{
+    background-color: #1b1b1b;
+    border-radius: 50%;
+}
+.bi-plus:hover,.bi-arrow-right-short:hover{
+    color: white !important;
+}
+
+.library-text:hover{
+    color: white !important;
+    cursor: pointer;
+}
+/* Flexbox to align buttons in one row */
+.button-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 0px !important; /* Adjust the space between buttons */
+    padding: 15px;
+    background-color: var(--BackColor);
+}
+
+/* Button styles */
+.library-button-filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2a2a2a ;
+    color: #fafafa !important;
+    outline: none;
+    border: none;
+    height: 30px;
+    font-size: 14px;
+    border-radius: 15px;
+    padding: 0 15px; /* Adjust button padding */
+    transition: background-color 0.2s;
+}
+
+.library-button-filter:hover,
+.library-button-filter:focus {
+    background-color: #333333 !important; /* Color when hovered or focused */
+    cursor: pointer;
+}
+
+.playlist-container{
+    height: 75%;
+    overflow-y: auto;
+    /* border: 1px solid green !important; */
+}

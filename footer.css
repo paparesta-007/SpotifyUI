@@ -1,0 +1,118 @@
+:root {
+    --BackColor: #121212;
+    --SidebarHeight: 78%; /* Remaining height after header and footer */
+    --HeaderHeight: 10%;   /* Height for the header */
+    --FooterHeight: 12%;   /* Height for the footer */
+    --textColorNormal: #b3b3b3;
+    --SearchBarBackColor: #1f1f1f;
+}
+.footer {
+    position: fixed;
+    bottom: 0;
+    height: var(--FooterHeight);
+    width: 100%;
+    height: 85px;
+    margin: 0 !important;
+    background-color: black;
+    color: var(--textColorNormal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Modifica l'orientamento per disporre gli elementi verticalmente */
+    padding: 0px !important;
+}
+
+.player-controls {
+    display: flex;
+    flex-direction: column; /* Dispone i controlli e la barra di progresso uno sotto l'altro */
+    align-items: center;
+    justify-content: center;
+
+}
+::placeholder{
+    display: flex !important;
+    align-items: center !important;
+    /* color: green !important; */
+    /* margin-top: 25px !important; */
+    justify-content: center !important;
+}
+
+.buttons {
+    display: flex;
+    gap: 0px; /* Aggiunge uno spazio tra i bottoni */
+    justify-content: center;
+  /* Spazio tra i bottoni e la barra di progresso */
+}
+
+.progress-container {
+    display: flex;
+    /* flex-direction: ; */
+    align-items: center;
+    justify-content: space-between;
+    width: 600px;
+    margin: 0 3px !important;
+    padding: 0 10px;
+}
+
+.time-container {
+    display: flex;
+    justify-content: space-between; /* Spinge i due testi agli estremi opposti */
+    width: 100%; /* Assicura che i testi siano ai lati opposti */
+    margin-bottom: 5px; /* Aggiunge spazio tra i testi e la barra di progresso */
+    padding: 0 10px; /* Aggiunge un po' di padding per distanziare i testi dai bordi */
+}
+
+.progress-bar {
+    width: 100%;
+    height: 4px;
+    background-color: rgb(99, 95, 95);
+    border-radius: 5px;
+}
+
+.progress {
+    width: 0;
+    height: 100%;
+    background-color: white;
+    border-radius: 5px;
+    transition: width 0.5s ease;
+}
+
+.progress-bar:hover .progress {
+    background-color: #21ba57;
+}
+
+.time {
+    color: var(--textColorNormal); /* Stile per il colore del testo */
+}
+.bi-skip-start-fill,.bi-skip-end-fill{
+    font-size: 24px;
+    color: var(--textColorNormal);
+}
+.bi-play-circle-fill,.bi-pause-circle-fill{
+    color: white !important;
+    font-size: 32px;
+}
+.bi:hover{
+    color: white !important;
+    border: none !important;
+}
+.btnControls{
+    border: none !important;
+}
+.btnControls:hover{
+    transform: scale(1.06);
+}
+#currentTime,
+#duration {
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--textColorNormal);
+    margin: 0px 10px; /* Add left and right margins to create space around the time */
+}
+.bi-repeat {
+  color: var(--textColorNormal);
+}
+
+

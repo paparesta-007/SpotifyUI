@@ -1,0 +1,176 @@
+@font-face {
+    font-family: "CircularSpotifyTex";
+    src: url(./font/CircularSpotifyText-Book.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    /* font-family: "CircularSpotifyTex"; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif    ;
+}
+:root {
+    --BackColor: #121212;
+    --SidebarHeight: 78%; /* Remaining height after header and footer */
+    --HeaderHeight: 10%;   /* Height for the header */
+    --FooterHeight: 12%;   /* Height for the footer */
+    --textColorNormal: #b3b3b3;
+    --SearchBarBackColor: #1f1f1f;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: black !important;
+}
+
+.left-sidebar, .right-sidebar {
+    position: fixed;
+    top: var(--HeaderHeight);
+    height: var(--SidebarHeight);
+    width: 300px;
+    background-color: black;
+    border: 7.5px solid black;
+    border-bottom: 7.5px solid black;
+    border-top: 0 !important;
+}
+
+.left-sidebar {
+    left: 0;
+}
+
+.right-sidebar {
+    right: 0;
+}
+
+.content-left-sidebar, .content-right-sidebar {
+    width: 100%;
+    height: 100%;
+    border-radius: 7.5px;
+    background-color: var(--BackColor);
+}
+
+.main-content {
+    position: fixed;
+    top: var(--HeaderHeight);
+    left: 300px;
+    right: 300px;
+    height: var(--SidebarHeight);
+    background-color: #121212;
+
+    border-left: 0 !important;
+    border-right: 0 !important;
+    border-bottom: 7.5px solid black;
+    border-radius: 7.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    height: var(--FooterHeight);
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+.container-fluid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgPlaylist,.imgPlaylistCantante{
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+}
+.imgPlaylistCantante{
+    border-radius: 50%;
+}
+.infoPlaylist{
+    margin-top: 10px;
+    line-height: 0;
+    color: white;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.infoPlaylist>p{
+    color: var(--textColorNormal);
+    font-size: 14px;
+}
+.playlist {
+    position: relative; /* Necessario per posizionare l'icona di riproduzione */
+    /* padding-left: 10px; */
+    display: flex !important;
+    align-items: center;
+    border-radius: 8px;
+    padding: 4px 0 4px 10px;
+    transition: background-color 0.3s; /* Transizione per l'effetto hover */
+}
+
+.playlist:hover {
+    background-color: #1f1f1f;
+    cursor: pointer;
+}
+
+.playlist:hover {
+    display: flex; /* Mostra l'icona di riproduzione quando si passa il mouse */
+}
+
+.searchPlaylistInLibrary{
+    display: flex;
+    margin-left: 10px;
+    width: 200px;
+    background-color: #2a2a2a;
+}
+
+
+/* ****************************************************** */
+@media (max-width: 850px) {
+    .right-sidebar {
+        display: none;
+    }
+    .main-content {
+      
+        right: 0; /* Rimuovi l'offset a destra */
+        width: 60%; /* Occupa tutta la larghezza */
+        border-radius: 0; /* Rimuovi il bordo arrotondato */
+    }
+}
+/* Stile per la scrollbar */
+::-webkit-scrollbar {
+    width: 10px; /* Larghezza della scrollbar */
+    background-color: var(--BackColor); /* Colore dello sfondo */
+}
+
+/* Stile per il "track" della scrollbar */
+::-webkit-scrollbar-track {
+    background: var(--BackColor); /* Colore del track */
+    border-radius: 10px; /* Border-radius del track */
+}
+
+/* Stile per il "thumb" della scrollbar */
+::-webkit-scrollbar-thumb {
+    background: gray; /* Colore del thumb */
+    /* border-radius: 10px; Border-radius del thumb */
+}
+
+/* Stile per il thumb al passaggio del mouse */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Colore del thumb al passaggio del mouse */
+}
+.green{
+    color: #21ba57!important;
+}

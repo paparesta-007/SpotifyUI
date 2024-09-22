@@ -1,0 +1,77 @@
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Allinea il contenuto a sinistra */
+  justify-content: flex-start; /* Allinea il contenuto in alto */
+  color: white;
+}
+:root {
+  --BackColor: #121212;
+  --SidebarHeight: 78%; /* Remaining height after header and footer */
+  --HeaderHeight: 10%; /* Height for the header */
+  --FooterHeight: 12%; /* Height for the footer */
+  --textColorNormal: #b3b3b3;
+  --SearchBarBackColor: #1f1f1f;
+}
+
+.info > p {
+  font-size: 14px;
+  color: var(--textColorNormal);
+  position: absolute;
+  top: 28%;
+}
+.info > h6 {
+  position: fixed;
+  top: 17%;
+  font-size: 13px;
+}
+.info > h2 {
+  position: fixed;
+  top: 20%;
+  font-size: 70px;
+  font-weight: bold;
+}
+.fixed-image {
+    width: 200px !important;
+    height: 200px !important;
+    background-size: cover;
+    background-position: center;
+}
+.info{
+    margin-top: 2%;
+}
+.infoDettagliatePlaylist {
+  position:fixed;
+  top: 38% !important;
+    display: flex;
+    align-items: center; /* Centra verticalmente il contenuto */
+    justify-content: left;
+}
+
+.infoDettagliatePlaylist > p {
+    font-size: 12px;
+    margin-top: 3%;
+    font-weight:300;
+    letter-spacing: 1px;
+    margin-left: 5px; /* Aggiungi un piccolo margine a sinistra per distanziare il testo dall'immagine */
+}
+.userPlayList:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.imgProfiloInsidePlaylist{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.nBraniDurataTot{
+    color: var(--textColorNormal);
+}
+.image-container>img{
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+.divHeaderPlaylist{
+  width: 100%;
+}

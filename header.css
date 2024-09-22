@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --BackColor: #121212;
+    --SidebarHeight: 78%; /* Remaining height after header and footer */
+    --HeaderHeight: 10%;   /* Height for the header */
+    --FooterHeight: 12%;   /* Height for the footer */
+    --textColorNormal: #b3b3b3;
+    --SearchBarBackColor: #1f1f1f;
+}
+.imgProfilo{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.searchDiv {
+    background-color: var(--SearchBarBackColor);
+    border: none;
+    transition: all 0.2s;
+    width: 30%; /* Adjusted for better horizontal centering */
+    height: 45px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+    position: relative;
+}
+
+.navbar-brand {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--SearchBarBackColor);
+    margin-right: 15px;
+}
+
+.bi {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    color: var(--textColorNormal);
+    font-weight: bold !important;
+}
+
+input[type="search"], input[type="search"]:focus {
+    width: 92%;
+    height: 100%;
+    background-color: var(--SearchBarBackColor);
+    border: none;
+    margin: 0 !important;
+    line-height: 45px; /* Matches the height */
+    padding: 0 5px !important; /* Padding can be adjusted as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    box-shadow: none;
+    color: white;
+    font-size: 16px; /* Set a font size if not already defined */
+}
+input[type="search"], input[type="search"]:focus {
+    padding: 0 5px !important; /* Horizontal padding */
+    padding-top: 10px; /* Adjust this value to center vertically */
+    padding-bottom: 10px; /* Adjust this value to center vertically */
+}
+
+
+::placeholder {
+    color: var(--textColorNormal) !important;
+    font-weight: 450;
+    font-size: 16px;
+    margin-top: 20px !important;
+}
+
+.searchDiv:focus-within {
+    border: 2px solid white; /* Apply white border to the entire form */
+  
+}
+
+
+.navbar {
+    border-radius: 15px;
+    /* border: 7px 7px 0px 7px solid black; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0 !important;
+    width: 100%;
+    height: var(--HeaderHeight);
+    background-color: black;
+
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.navbar .container-fluid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.search-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--textColorNormal);
+    transition: none !important;
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.HeaderBtnContainer {
+    position: absolute;
+    top: 50%; /* Centra il contenitore in verticale */
+    right: 15px; /* Ancorato a destra */
+    transform: translateY(-50%); /* Corregge l'allineamento verticale */
+    display: flex;
+    gap: 10px; /* Spazio tra i bottoni */
+}
+
+.btnHeader, .btnHeader:active, .btnHeader:focus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: none;
+    line-height: 40px;
+    border-radius: 50%;
+    background-color: transparent; /* Assicura che il bottone abbia uno sfondo trasparente */
+    /* color: var(--textColorNormal); */
+}
+
+.btnHeader:hover i {
+    color: white !important; /* Cambia anche il colore dell'icona */
+}
+
+.spotiLogo,.spotiLogo:active,.spotiLogo:focus{
+    width: 35px;
+    height: 35px;
+    
+}
+    
