@@ -7,26 +7,25 @@ window.onload = function () {
   const playPauseButtonIcon = document.getElementById("btnPlayPauseIcon");
   let spanCurrentTime = document.getElementById("currentTime");
   let spanDuration = document.getElementById("duration");
-  let leftSidebarContent = document.getElementById("leftSidebarContent");
 
   playPauseButton.addEventListener("click", togglePlayPause);
-  spanDuration.innerHTML = audio.duration;
-  const min = Math.floor(audio.duration / 60);
-  const sec = Math.floor(audio.duration % 60);
-  const tot = sec < 10 ? `0${sec}` : sec;
-
-  spanDuration.textContent = `${min}:${tot}`;
+  
+  audio.addEventListener("loadedmetadata", () => {
+    const min = Math.floor(audio.duration / 60);
+    const sec = Math.floor(audio.duration % 60);
+    const tot = sec < 10 ? `0${sec}` : sec;
+    spanDuration.textContent = `${min}:${tot}`;
+  });
 
   function togglePlayPause() {
     if (audio.paused) {
       audio.play();
-      btnPlayPauseIcon.classList.remove("bi-play-circle-fill");
-      btnPlayPauseIcon.classList.add("bi-pause-circle-fill");
+      playPauseButtonIcon.classList.remove("bi-play-circle-fill");
+      playPauseButtonIcon.classList.add("bi-pause-circle-fill");
     } else {
       audio.pause();
-
-      btnPlayPauseIcon.classList.remove("bi-pause-circle-fill");
-      btnPlayPauseIcon.classList.add("bi-play-circle-fill");
+      playPauseButtonIcon.classList.remove("bi-pause-circle-fill");
+      playPauseButtonIcon.classList.add("bi-play-circle-fill");
     }
   }
 
@@ -42,6 +41,23 @@ window.onload = function () {
 
   setInterval(updateProgressBar, 1000);
 
+  // Aggiungi l'evento click sulla barra di progresso
+  progressBar.parentElement.addEventListener("click", (event) => {
+    const progressBarWidth = progressBar.parentElement.clientWidth;
+    const posxX = event.offsetX; 
+   
+    audio.currentTime = (posxX / progressBarWidth) * audio.duration; 
+    updateProgressBar(); 
+  });
+  window.addEventListener("keydown", (event) => {
+    if (event.code === "Space" || event.code === "Enter") {
+      event.preventDefault();
+      togglePlayPause(); 
+    }
+  });
+
+  // Resto del codice per la playlist...
+  
   const container = document.getElementById("playlistContainer");
 
   playList.forEach((item) => {
@@ -91,7 +107,7 @@ window.onload = function () {
     divHeaderPlaylist.classList.add(
       "rounded",
       "p-4",
-      "m-1",
+      // "m-1",
       "d-flex",
       "align-items-center",
       "divHeaderPlaylist"
@@ -178,6 +194,6 @@ window.onload = function () {
     b = Math.floor(b / pixelCount);
 
     // Applico il colore medio come background
-    targetDiv.style.backgroundColor = `rgb(${r},${g},${b})`;
+    targetDiv.style.background = `linear-gradient(to bottom, rgb(${r}, ${g}, ${b}) 80%, #121212 100%)`;
   }
 };

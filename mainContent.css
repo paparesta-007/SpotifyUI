@@ -17,17 +17,17 @@
 .info > p {
   font-size: 14px;
   color: var(--textColorNormal);
-  position: absolute;
-  top: 28%;
+  position: relative;
+  top: 50px;
 }
 .info > h6 {
-  position: fixed;
-  top: 17%;
+  position: relative;
+  top: -50px;
   font-size: 13px;
 }
 .info > h2 {
-  position: fixed;
-  top: 20%;
+  position: absolute;
+  top: 70px;
   font-size: 70px;
   font-weight: bold;
 }
@@ -41,8 +41,8 @@
     margin-top: 2%;
 }
 .infoDettagliatePlaylist {
-  position:fixed;
-  top: 38% !important;
+  position:relative;
+  top: 45px !important;
     display: flex;
     align-items: center; /* Centra verticalmente il contenuto */
     justify-content: left;

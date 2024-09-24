@@ -88,6 +88,6 @@
 
 .playlist-container{
     height: 75%;
-    overflow-y: auto;
+    overflow-y:auto !important;
     /* border: 1px solid green !important; */
 }
