@@ -157,8 +157,14 @@ form{
 }
 
 .spotiLogo,.spotiLogo:active,.spotiLogo:focus{
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     
 }
-    
+#btnSettings {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    /* width: 30px !important; */
+    z-index: 1000;
+}

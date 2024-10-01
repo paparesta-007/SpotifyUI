@@ -196,4 +196,5 @@ window.onload = function () {
     // Applico il colore medio come background
     targetDiv.style.background = `linear-gradient(to bottom, rgb(${r}, ${g}, ${b}) 80%, #121212 100%)`;
   }
+  
 };

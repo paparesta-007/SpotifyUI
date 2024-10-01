@@ -20,12 +20,13 @@
     /* height: 40px; */
     background-color: var(--BackColor);
     border-radius: 7.5px;
-    padding:15px 15px 15px 15px !important;
+    padding:15px 15px 0 15px;
 
 }
 
 .library-text {
     line-height:40px;
+    /* padding: 0 !important; */
     color: var(--textColorNormal);
     font-weight: bolder;
     margin-right: 50px;
@@ -60,7 +61,7 @@
     display: flex;
     justify-content: space-between;
     gap: 0px !important; /* Adjust the space between buttons */
-    padding: 15px;
+    padding: 5px 15px 4px 15px;
     background-color: var(--BackColor);
 }
 
@@ -87,7 +88,57 @@
 }
 
 .playlist-container{
-    height: 75%;
+    height: 72%;
     overflow-y:auto !important;
     /* border: 1px solid green !important; */
+}
+#selectOrderPlaylistLeftbar{
+    display: flex;
+    width: 80px;
+    background-color: transparent !important;
+    color: var(--textColorNormal);
+    border: none;
+    outline: none;
+    float: right !important;
+    width: auto;
+    /* margin-right: 10px; */
+    text-align: right;
+    appearance: none; /* Hides the default arrow */
+    -webkit-appearance: none; /* Hides arrow in Safari */
+    -moz-appearance: none;
+    cursor: pointer;
+}
+
+.SelectOrder:hover #selectOrderPlaylistLeftbar,
+/* Effetto hover sull'icona */
+.SelectOrder:hover .sortIcon,
+#selectOrderPlaylistLeftbar:focus + .sortIcon {
+    /* transform: scale(1.03); Ingrandimento del select */
+    color: white !important; /* Colore del testo */
+    background-color: var(--BackColor); /* Cambia il colore di sfondo */
+}
+
+.cercaEOrdina {
+    padding: 10px 0;
+    display: flex;
+    align-items: center; /* Allinea verticalmente gli elementi */
+    justify-content: space-between; /* Distribuisce lo spazio tra gli elementi */
+}
+.bi-list-ul{
+    float: right !important;
+    margin-top: 4px !important;
+    margin-left: 2px !important;
+    margin-right: 20px !important;
+    /* color: ; */
+    padding: 0;
+    margin: 0;
+}
+option {
+
+    color:var(--textColorNormal);
+    background-color: #282828 !important;
+}
+.imgLibreria{
+    width: 30px;
+    color: var(--textColorNormal) !important;
 }
