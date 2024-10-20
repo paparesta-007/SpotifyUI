@@ -97,6 +97,8 @@ window.onload = function () {
       const MainContent = document.getElementById("mainContent");
       MainContent.innerHTML = "";
       createMainDiv(item);
+      // loadTable()
+      console.log(item)
     });
   });
 
